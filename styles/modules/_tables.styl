@@ -1,0 +1,126 @@
+table,
+th,
+td
+  border: 1px solid rgba(0, 0, 0, 0.1)
+
+table
+  border-collapse: collapse
+  border-spacing: 0
+  margin-bottom: 24px
+  width: 100%
+
+caption,
+th,
+td
+  font-weight: normal
+  text-align: left
+
+th
+  border-width: 0 1px 1px 0
+  font-weight: bold
+  padding-right: 0.5em
+  padding-left: 0.5em
+  @media only screen and (max-width: 700px)
+    font-size: 13px
+    font-weight: normal
+
+cell-color($fill, $has-color = true)
+  fill: $fill
+  background-color: lighten($fill, 90%)
+  if $has-color == true
+    color: darken($fill, 60%)
+    .required-version
+      background-color: rgba(desaturate(darken(@background-color, 20%), 20%), 0.5)
+
+td
+  border-width: 0 1px 1px 0
+  position: relative
+  background-clip: padding-box
+  &.available
+    cell-color(#447B3D)
+  &.partial
+    cell-color(#DF9C0C)
+  &.not-available
+    cell-color(#A21F1F, false)
+
+.table-content
+  -transparent-bg()
+  position: relative
+  margin-top: 2em
+  table-layout: fixed
+  border-color: #888
+
+  .required-version
+    position: absolute
+    top: 0
+    left: 0
+    font-size: 14px
+    padding: 0 5px
+    @media only screen and (max-width: 800px)
+      font-size: 12px
+
+  .note
+    display: block
+    font-size: 12px
+    @media only screen and (max-width: 800px)
+      font-size: 10px
+
+  .narrow
+    width: 19%
+
+  @media only screen and (max-width: 800px)
+    font-size: 13px
+
+  th
+    background-color: #bbb
+
+  td
+    padding: 5px 8px
+    @media only screen and (max-width: 800px)
+      padding: 4px 2px
+    &:first-child
+      text-align: left
+    strong
+      display: block
+      text-transform: capitalize
+    p
+      font-size: 0.9em
+      margin-bottom: 0
+
+  td,
+  th
+    border-color: @border-color
+    text-align: center
+    &.disabled
+      background-color: @border-color
+
+  tbody
+    th
+      text-align: left
+      background: #d5d5d5
+
+  caption
+    color: #fff
+    top: -2em
+    left: 0
+    right: -1px
+    background: $purple
+    background: -webkit-linear-gradient(315deg, transparent 9px, $purple 9px)
+    background: linear-gradient(135deg, transparent 9px, $purple 9px)
+    font-weight: 700
+    padding: 5px 0 4px 15px
+    text-transform: uppercase
+    font-family: "Consolas", monospace
+
+  a:first-child
+    display: block
+    font-size: 1.1em
+    text-decoration: none
+    text-align: center
+    background-color: $light-complementary-color
+    color: #000
+    &:hover,
+    &:focus
+      background-color: darken($light-complementary-color, 15%)
+    @media only screen and (max-width: 800px)
+      font-size: 0.9em

@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<!--[if IE 8]>         <html class="ie8 lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Add magic to your selectors and reduce repetition with the parent reference - &lt;code&gt;&amp;amp;&lt;/code&gt;, useful for BEM fans" />
+    <meta name="keywords" content="css, preprocessors, preprocessor, less, sass, scss, stylus" />
+    <link rel="alternate" type="application/rss+xml" title="CSS Preprocessors" href="https://csspre.com/rss.xml" />
+
+    <title>Parent Reference ◩ CSS PREprocessors</title>
+
+    <style type="text/css">.u-cf,.site-navigation,.post,section{*zoom:1;}.u-cf:before,.site-navigation:before,.post:before,section:before,.u-cf:after,.site-navigation:after,.post:after,section:after{content:" ";display:table}.u-cf:after,.site-navigation:after,.post:after,section:after{clear:both}.grid{margin-left:-2%;font-size:0;}.grid > *{margin-left:2%}.col-1,.col-2,.col-3,.col-4,.col-5,.col-6,.col-7,.col-8,.col-9,.col-10,.col-11,.col-12{position:relative;display:inline-block;min-height:1px;font-size:16px;vertical-align:top}.col-1{width:6.333333333333334%;margin-bottom:2%;}@media screen and (max-width:800px){.col-1{width:98%}}.col-2{width:14.666666666666668%;margin-bottom:2%;}@media screen and (max-width:800px){.col-2{width:98%}}.col-3{width:23%;margin-bottom:2%;}@media screen and (max-width:800px){.col-3{width:98%}}.col-4{width:31.333333333333336%;margin-bottom:2%;}@media screen and (max-width:800px){.col-4{width:98%}}.col-5{width:39.66666666666667%;margin-bottom:2%;}@media screen and (max-width:800px){.col-5{width:98%}}.col-6{width:48%;margin-bottom:2%;}@media screen and (max-width:500px){.col-6{width:98%}}.col-7{width:56.33333333333334%;margin-bottom:2%;}@media screen and (max-width:800px){.col-7{width:98%}}.col-8{width:64.66666666666667%;margin-bottom:2%;}@media screen and (max-width:800px){.col-8{width:98%}}.col-9{width:73.00000000000001%;margin-bottom:2%;}@media screen and (max-width:800px){.col-9{width:98%}}.col-10{width:81.33333333333334%;margin-bottom:2%;}@media screen and (max-width:800px){.col-10{width:98%}}.col-11{width:89.66666666666666%;margin-bottom:2%;}@media screen and (max-width:800px){.col-11{width:98%}}.col-12{width:98%;margin-bottom:2%;}@media screen and (max-width:800px){.col-12{width:98%}}html{font-size:1em;line-height:1.4}body{margin:0}body,button,input,select,textarea{color:#111;font-family:sans-serif;font-size:16px;font-weight:400;line-height:1.5}::selection{background:#7b3d66;color:#fff;text-shadow:none}::-moz-selection{background:#7b3d66;color:#fff;text-shadow:none}:target{-webkit-animation:yellow-fade 4s 1;animation:yellow-fade 4s 1}@-webkit-keyframes yellow-fade{0%{background-color:rgba(251,255,42,0.6)}100%{background-color:rgba(0,0,0,0)}}img,svg{vertical-align:middle}article,aside,details,figcaption,figure,footer,header,hgroup,nav,section{display:block}time{display:inline-block}html{-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%}embed,iframe,object,video{margin-bottom:24px;max-width:100%}input{border:1px solid rgba(0,0,0,0.1);color:#2b2b2b;padding:8px 10px 7px;}input:focus{border:1px solid rgba(0,0,0,0.3);outline:0}button,input,select,textarea{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;font-size:100%;margin:0;max-width:100%;vertical-align:baseline}button,input{line-height:normal}input,textarea{background-image:-webkit-linear-gradient(rgba(255,255,255,0),rgba(255,255,255,0))}input[type="image"]{padding:0;border:0;}input[type="image"]:focus{border:0}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a,a:visited{text-decoration:underline}a[href]:after{content:" (" attr(href) ")"}abbr[title]:after{content:" (" attr(title) ")"}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important;-ms-interpolation-mode:bicubic;border:0}@page{margin:.5cm}p,h2,h3{orphans:3;widows:3}h2,h3{page-break-after:avoid}}@-ms-viewport{width:device-width}@viewport{width:device-width}@-moz-keyframes yellow-fade{0%{background-color:rgba(251,255,42,0.6)}100%{background-color:rgba(0,0,0,0)}}@-webkit-keyframes yellow-fade{0%{background-color:rgba(251,255,42,0.6)}100%{background-color:rgba(0,0,0,0)}}@-o-keyframes yellow-fade{0%{background-color:rgba(251,255,42,0.6)}100%{background-color:rgba(0,0,0,0)}}@keyframes yellow-fade{0%{background-color:rgba(251,255,42,0.6)}100%{background-color:rgba(0,0,0,0)}}a{color:#7b3d66;text-decoration:none;}p a,li a{border-bottom:1px dashed #777;}p a:hover,li a:hover,p a:active,li a:active{border-bottom:1px solid #7b3d66}a:focus{outline:thin dotted}a:hover,a:active{outline:0;color:#5c2e4d}h1,h2,h3,h4,h5,h6{font-weight:400}h1,h2{line-height:1;margin:0 0 .5em}h2{font-size:28px;}@media only screen and (max-width:800px){h2{font-size:21px}}h3{font-size:24px;line-height:1.2;margin:0 0 .4em}abbr[title]{border-bottom:1px dotted #2b2b2b;cursor:help}b,strong{font-weight:700}p{margin:0 0 24px;}p:empty{display:none}ul,ol{list-style:none;margin:0 0 20px;padding-left:25px}ul{list-style:disc}ol{list-style:decimal}li > ul,li > ol{margin:0 0 0 20px}.site-navigation{position:relative;margin:0 auto;font-size:0;background:rgba(255,255,255,0.36);max-width:1220px;padding:0 3.6%;z-index:1;}@media only screen and (max-width:700px){.site-navigation{padding:0}}.site-navigation a{display:inline-block;color:#fff;padding:9px 4%;font-size:18px;}@media only screen and (max-width:700px){.site-navigation a{font-size:14px;padding:9px 2.9%}}.site-navigation a:hover{color:#7b3d66;background-color:#bbb}.site-navigation a:focus,.site-navigation a.active,.site-navigation a:active{color:#7b3d66;background-color:#fff}code{display:inline-block;background:#b387a4;padding:.05em .2em;border-radius:3px;color:#fff;white-space:nowrap;font-family:"Lucida Console","Lucida Sans Typewriter",Monaco,"Bitstream Vera Sans Mono",monospace;font-size:1em;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none;line-height:1.3;}th code{background:initial;padding:initial;border:none;color:initial;white-space:initial}pre code{background:rgba(255,255,255,0.7);display:block;padding:12px;white-space:pre;overflow:auto;color:initial;border-radius:initial}pre{border-top:0;margin-top:0;max-width:100%;position:relative;}pre[data-type]:before{content:attr(data-type);display:block;color:#fff;background:#7b3d66;background:-webkit-linear-gradient(315deg,transparent 9px,#7b3d66 9px);background:linear-gradient(135deg,transparent 9px,#7b3d66 9px);font-weight:700;padding:7px 0;text-indent:15px;text-transform:uppercase;font-family:"Consolas",monospace}pre[data-csspre]:before{content:attr(data-csspre);background:#6a6a6a;background:-webkit-linear-gradient(315deg,transparent 9px,#6a6a6a 9px);background:linear-gradient(135deg,transparent 9px,-webkit-linear-gradient(315deg,transparent 9px,#6a6a6a 9px) 9px)}pre[data-csspre][data-version]:after{content:attr(data-version) '+';text-align:center;left:80px;top:0;position:absolute;color:#afafaf;padding:7px 0}.addon{float:right;color:#4885b9 !important;background-color:rgba(177,209,236,0.5);padding:0 10px;margin-top:-24px;position:relative;line-height:24px;}.addon:before{content:"";display:block;position:absolute;background-color:rgba(177,209,236,0.5);width:8px;height:8px;top:-8px;left:8px}.addon:after{content:"";position:absolute;display:block;background-image:linear-gradient(to bottom,rgba(177,209,236,0.5) 8px,transparent 8px,transparent 16px,rgba(177,209,236,0.5) 16px);width:8px;height:24px;left:-8px;top:0}td .addon{position:absolute;bottom:0;right:0}.codepen-button,.jsbin-button{position:absolute;-webkit-transition:all 330ms cubic-bezier(.5,-1,.5,2);transition:all 330ms cubic-bezier(.5,-1,.5,2);}.codepen-button:hover,.jsbin-button:hover{-webkit-transform:scale(1.63);transform:scale(1.63)}.codepen-button{top:3px;right:10px;height:32px}.jsbin-button{top:1px;right:55px;height:36px}.cm-keyword,.cm-attribute{color:#994500}.cm-atom{color:#219}.cm-property,.cm-tag,.cm-variable{color:#7c1775}.cm-variable-2,.cm-def{color:#05a}.cm-variable-3,.cm-number{color:#164}.cm-comment{color:#236e25}.cm-string{color:#b32727}.cm-meta,.cm-qualifier,.cm-operator{color:#111}.cm-builtin{color:#37148a}.cm-bracket{color:#cc7}table,th,td{border:1px solid rgba(0,0,0,0.1)}table{border-collapse:collapse;border-spacing:0;margin-bottom:24px;width:100%}caption,th,td{font-weight:normal;text-align:left}th{border-width:0 1px 1px 0;font-weight:bold;padding-right:.5em;padding-left:.5em;}@media only screen and (max-width:700px){th{font-size:13px;font-weight:normal}}td{border-width:0 1px 1px 0;position:relative;background-clip:padding-box;}td.available{fill:#447b3d;background-color:#eaf4e9;color:#1b3118;}td.available .required-version{background-color:rgba(177,208,173,0.5)}td.partial{fill:#df9c0c;background-color:#fef6e5;color:#593e05;}td.partial .required-version{background-color:rgba(239,210,147,0.5)}td.not-available{fill:#a21f1f;background-color:#fae4e4;}.table-content{background:rgba(255,255,255,0.7);position:relative;margin-top:2em;table-layout:fixed;border-color:#888;}.table-content .required-version{position:absolute;top:0;left:0;font-size:14px;padding:0 5px;}@media only screen and (max-width:800px){.table-content .required-version{font-size:12px}}.table-content .note{display:block;font-size:12px;}@media only screen and (max-width:800px){.table-content .note{font-size:10px}}.table-content .narrow{width:19%}@media only screen and (max-width:800px){.table-content{font-size:13px}}.table-content th{background-color:#bbb}.table-content td{padding:5px 8px;}@media only screen and (max-width:800px){.table-content td{padding:4px 2px}}.table-content td:first-child{text-align:left}.table-content td strong{display:block;text-transform:capitalize}.table-content td p{font-size:.9em;margin-bottom:0}.table-content td,.table-content th{border-color:#888;text-align:center;}.table-content td.disabled,.table-content th.disabled{background-color:#888}.table-content tbody th{text-align:left;background:#d5d5d5}.table-content caption{color:#fff;top:-2em;left:0;right:-1px;background:#7b3d66;background:-webkit-linear-gradient(315deg,transparent 9px,#7b3d66 9px);background:linear-gradient(135deg,transparent 9px,#7b3d66 9px);font-weight:700;padding:5px 0 4px 15px;text-transform:uppercase;font-family:"Consolas",monospace}.table-content a:first-child{display:block;font-size:1.1em;text-decoration:none;text-align:center;background-color:#bdc0d1;color:#000;}.table-content a:first-child:hover,.table-content a:first-child:focus{background-color:#9a9eb8}@media only screen and (max-width:800px){.table-content a:first-child{font-size:.9em}}.tile{background:rgba(255,255,255,0.7);padding:.6em 1em;display:block;color:#333;font-size:14px;border-style:solid;border-width:0 0 6px;border-color:#7b3d66;background-color:#eee;}.tile:hover,.tile:focus,.tile:active{color:#000;background-color:#fff}.tile:focus,.tile:active{border-color:#562b47}.tile h3{margin-bottom:0}.tile time{color:#aaa;font-size:13px;margin-bottom:.8em}.post h2{padding-top:1em}.post div[class*='sass']{display:none}#sass-syntax{overflow:hidden;clip:rect(0 0 0 0);height:1px;width:1px;margin:-1px;padding:0;border:0;}#sass-syntax-badge{-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;padding:.2em .4em;font-family:Consolas,"Andale Mono",monospace;font-size:18px;background-color:#999;background-image:-webkit-linear-gradient(to right,#fff 50%,transparent 50%);background-image:linear-gradient(to right,#fff 50%,transparent 50%);z-index:1;cursor:pointer;}#sass-syntax:checked ~ #sass-syntax-badge{background-image:-webkit-linear-gradient(to right,transparent 50%,#fff 50%);background-image:linear-gradient(to right,transparent 50%,#fff 50%)}#sass-syntax,#sass-syntax-badge{position:fixed;top:.6em;right:1em;}@media only screen and (max-width:660px){#sass-syntax,#sass-syntax-badge{top:.4em;right:5px;font-size:13px}}#sass-syntax:checked ~ .post div[class*='scss']{display:none}#sass-syntax:checked ~ .post div[class*='sass']{display:inline-block}.meta{font-size:.8em;margin-top:-1.75em;margin-bottom:30px;color:#666}html{background-image:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAA8AgMAAABHkjHhAAAADFBMVEW3t72zs7q4uL66usDztsWmAAAAgUlEQVR4AV3HoZUCAQxF0TWLob6JSQeY3xclYNIXJpzDMOK96+7fz//xVXrr0Yev5VuPPnwt33r04Wv51qMPX8u3Hn34Wr716MPX8q1HH/62/P36cXo8T9dffL351qMPX8u3Hn34Wr716MPX8q1HH76Wbz368LV869GHr+Vbjz78B9UMtIcMXHm1AAAAAElFTkSuQmCC");background-size:30px 30px;background-color:#b7b7bd;padding:0}header{background:#7b3d66;text-align:center}.site{background:#f6f7f8;background:rgba(255,255,255,0.36);max-width:1220px;margin:0 auto 20px;padding:6px 3.6% 1%;position:relative}.site-title{margin:0;font-size:82px;font-family:'Iceland',sans-serif;line-height:1.1;color:#eee;}@media screen and (max-width:900px){.site-title{font-size:52px}}@media screen and (max-width:660px){.site-title{font-size:30px;text-align:left;text-indent:5px}}.site-title a{color:#eee;}.site-title a:hover{color:#fff}.page-title{font-size:54px;font-family:'Iceland',sans-serif;}@media screen and (max-width:800px){.page-title{font-size:38px}}</style>
+    <link href='https://fonts.googleapis.com/css?family=Iceland' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-50631028-1', 'csspre.com');
+      ga('require', 'displayfeatures');
+      ga('require', 'linkid', 'linkid.js');
+      ga('send', 'pageview');
+    </script>
+    <header>
+      
+        <h2 class="site-title">
+          <a href="/" class="logo__text big-link">CSS PREprocessors</a>
+        </h2>
+      
+      <nav class="site-navigation">
+        
+          <a href="/" class="inactive">
+            Blog
+          </a>
+        
+          <a href="/compare" class="inactive">
+            Compare
+          </a>
+        
+          <a href="/compile" class="inactive">
+            Compile
+          </a>
+        
+          <a href="/convert" class="inactive">
+            Convert
+          </a>
+        
+          <a href="/about" class="inactive">
+            About
+          </a>
+        
+      </nav>
+    </header>
+    
+    <section class="site" itemscope itemtype="http://schema.org/Article">
+      <h1 class="page-title" itemprop="name">Parent Reference</h1>
+    
+      <input type="checkbox" id="sass-syntax" />
+<label for="sass-syntax" id="sass-syntax-badge" title="Toggle between the two syntaxes of Sass">SCSS Sass</label>
+
+<div class="meta">
+  <time datetime="2014-06-20" itemprop="datePublished">
+    2014-06-20
+  </time>
+  by
+  <a href="https://plus.google.com/+AlexanderFutekov" rel="author" itemprop="author">Alexander Futekov</a>
+</div>
+
+<div class="post" itemprop="articleBody">
+  <p>So you&#39;ve discovered that preprocessors support nesting stuff, you use it here and there and after a while you want to be able to do more than setting a child selector.</p>
+<p>Well, you can.</p>
+<p>It&#39;s called a parent reference - <code>&amp;</code>, and it allows you to do some pretty cool stuff.</p>
+<h2 id="selector-append">Selector append</h2>
+<p>With the parent reference, you can easily attach a <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes">pseudo class</a> to the selector:</p>
+<div class="grid"><div class="col-6 less"><pre name="less" id="ParentReferenceAppendLess" data-csspre='less' data-type="css" ><code>.selector-append {
+  foo: bar;
+  &amp;:hover {
+    baz: qux;
+  }
+}
+</code></pre></div><div class="col-6 scss"><pre name="scss" id="ParentReferenceAppendScss" data-csspre='scss' data-type="css" ><code>.selector-append {
+  foo: bar;
+  &amp;:hover {
+    baz: qux;
+  }
+}
+</code></pre></div><div class="col-6 sass"><pre name="sass" id="ParentReferenceAppendSass" data-csspre='sass' data-type="css" ><code>.selector-append
+  foo: bar
+  &amp;:hover
+    baz: qux
+</code></pre></div><div class="col-6 stylus"><pre name="stylus" id="ParentReferenceAppendStylus" data-csspre='stylus' data-type="css" ><code>.selector-append
+  foo: bar
+  &amp;:hover
+    baz: qux
+</code></pre></div><div class="col-6 css"><pre name="css" id="ParentReferenceAppendCss"  data-type="css" ><code>.selector-append {
+  foo: bar;
+}
+.selector-append:hover {
+  baz: qux;
+}
+</code></pre></div></div>
+
+<p>You can also add <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Class_selectors">class</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/ID_selectors">id</a>, and <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors">attribute</a> selectors in this way.</p>
+<h2 id="extend-the-name-of-the-selector">Extend the name of the selector</h2>
+<p>If you need to extend the name of a selector you can do it in the same way as above:</p>
+<div class="grid"><div class="col-6 less"><pre name="less" id="ParentReferenceExtend nameLess" data-csspre='less' data-type="css" ><code>.extend-name {
+  &amp;-one {
+    foo: bar;
+  }
+  &amp;two {
+    baz: qux
+  }
+}
+</code></pre></div><div class="col-6 scss"><pre name="scss" id="ParentReferenceExtend nameScss" data-csspre='scss' data-version='3.3.0' data-type="css" ><code>.extend-name {
+  &amp;-one {
+    foo: bar;
+  }
+  &amp;two {
+    baz: qux;
+  }
+}
+</code></pre></div><div class="col-6 sass"><pre name="sass" id="ParentReferenceExtend nameSass" data-csspre='sass' data-version='3.3.0' data-type="css" ><code>.extend-name
+  &amp;-one
+    foo: bar
+  &amp;two
+    baz: qux
+</code></pre></div><div class="col-6 stylus"><pre name="stylus" id="ParentReferenceExtend nameStylus" data-csspre='stylus' data-type="css" ><code>.extend-name
+  &amp;-one
+    foo: bar
+  &amp;two
+    baz: qux
+</code></pre></div><div class="col-6 css"><pre name="css" id="ParentReferenceExtend nameCss"  data-type="css" ><code>.extend-name-one {
+  foo: bar;
+}
+.extend-nametwo {
+  baz: qux;
+}
+</code></pre></div></div>
+
+<p>This allows for BEM-like names in your CSS. You can read more about this technique from these articles:</p>
+<ul>
+<li><a href="http://www.alwaystwisted.com/post.php?s=2014-02-27-even-easier-bem-ing-with-sass-33">Even Easier BEM-ing with Sass 3.3</a></li>
+<li><a href="http://mikefowler.me/2013/10/17/support-for-bem-modules-sass-3.3/">Support for BEM modules in Sass 3.3</a></li>
+<li><a href="http://jonsuh.com/blog/sass-bem-selector-and-trailing-ampersand/">Sass BEM-Selector Support and Trailing Ampersand</a></li>
+</ul>
+<h2 id="parent-selector">Parent selector</h2>
+<p>We can also have a trailing ampersand - when we put it after...</p>
+<p>By having a trailing parent reference, you can add a parent selector:</p>
+<div class="grid"><div class="col-6 less"><pre name="less" id="ParentReferenceParentLess" data-csspre='less' data-type="css" ><code>.parent-selector {
+  foo: bar;
+  .ie7 &amp; {
+    baz: qux;
+  }
+}
+</code></pre></div><div class="col-6 scss"><pre name="scss" id="ParentReferenceParentScss" data-csspre='scss' data-type="css" ><code>.parent-selector {
+  foo: bar;
+  .ie7 &amp; {
+    baz: qux;
+  }
+}
+</code></pre></div><div class="col-6 sass"><pre name="sass" id="ParentReferenceParentSass" data-csspre='sass' data-type="css" ><code>.parent-selector
+  foo: bar
+  .ie7 &amp;
+    baz: qux
+</code></pre></div><div class="col-6 stylus"><pre name="stylus" id="ParentReferenceParentStylus" data-csspre='stylus' data-type="css" ><code>.parent-selector
+  foo: bar
+  .ie7 &amp;
+    baz: qux
+</code></pre></div><div class="col-6 css"><pre name="css" id="ParentReferenceParentCss"  data-type="css" ><code>.parent-selector {
+  foo: bar;
+}
+.ie7 .parent-selector {
+  baz: qux;
+}
+</code></pre></div></div>
+
+<p>This can be used to target browsers if we use the classic ie targeting solution <a href="http://www.paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/">as described by Paul Irish</a>.</p>
+<p>Another case where the parent selector can be useful is for parent element states where the children get specific classes.</p>
+<h2 id="selector-prepend">Selector prepend</h2>
+<p>Appending selectors might work when you are appending a class, id, or attribute selector, but what if we need to add a html element like <code>ol</code> to <code>.test</code>? With selector appending we will end up with <code>.testol</code> which is not what we want. For cases like this we need to prepend the selector.</p>
+<div class="grid"><div class="col-6 less"><pre name="less" id="ParentReferencePrependLess" data-csspre='less' data-type="css" ><code>.selector-prepend {
+  foo: bar;
+  ol&amp; {
+    baz: qux
+  }
+}
+</code></pre></div><div class="col-6 scss"><pre name="scss" id="ParentReferencePrependScss" data-csspre='scss' data-version='3.4.0' data-type="css" ><code>.selector-prepend {
+  foo: bar;
+  @at-root ol#{&amp;} {
+    baz: qux
+  }
+}
+</code></pre></div><div class="col-6 sass"><pre name="sass" id="ParentReferencePrependSass" data-csspre='sass' data-version='3.4.0' data-type="css" ><code>.selector-prepend
+  foo: bar
+  @at-root ol#{&amp;}
+    baz: qux
+</code></pre></div><div class="col-6 stylus"><pre name="stylus" id="ParentReferencePrependStylus" data-csspre='stylus' data-type="css" ><code>.selector-prepend
+  foo: bar
+  ol&amp;
+    baz: qux
+</code></pre></div><div class="col-6 css"><pre name="css" id="ParentReferencePrependCss"  data-type="css" ><code>.selector-prepend {
+  foo: bar;
+}
+ol.selector-prepend {
+  baz: qux;
+}
+</code></pre></div></div>
+
+
+
+<h2 id="multiple-parent-references">Multiple parent references</h2>
+<p>Need something weirder with a repeating class in the selector for example? No problem, just use several ampersands and chain the appropriately:</p>
+<div class="grid"><div class="col-6 less"><pre name="less" id="ParentReferenceMultipleLess" data-csspre='less' data-type="css" ><code>.multi-reference {
+  foo: bar;
+  &amp; + &amp; {
+    baz: qux;
+  }
+}
+</code></pre></div><div class="col-6 scss"><pre name="scss" id="ParentReferenceMultipleScss" data-csspre='scss' data-type="css" ><code>.multi-reference {
+  foo: bar;
+  &amp; + &amp; {
+    baz: qux;
+  }
+}
+</code></pre></div><div class="col-6 sass"><pre name="sass" id="ParentReferenceMultipleSass" data-csspre='sass' data-type="css" ><code>.multi-reference
+  foo: bar
+  &amp; + &amp;
+    baz: qux
+</code></pre></div><div class="col-6 stylus"><pre name="stylus" id="ParentReferenceMultipleStylus" data-csspre='stylus' data-type="css" ><code>.multi-reference
+  foo: bar
+  &amp; + &amp;
+    baz: qux
+</code></pre></div><div class="col-6 css"><pre name="css" id="ParentReferenceMultipleCss"  data-type="css" ><code>.multi-reference {
+  foo: bar;
+}
+.multi-reference + .multi-reference {
+  baz: qux;
+}
+</code></pre></div></div>
+
+
+
+<h2 id="combinatorial-explosion">Combinatorial explosion</h2>
+<p>The idea for combinatorial explosion <a href="http://lesscss.org/features/#parent-selectors-feature-combinatorial-explosion">comes from Less</a> and it can be useful for covering many combinations of selectors. Simulating it in Sass and Stylus is also possible.</p>
+<div class="grid"><div class="col-6 less"><pre name="less" id="ParentReferenceExplosionLess" data-csspre='less' data-type="css" ><code>p, ul, ol {
+  foo: bar;
+  &amp; + &amp; {
+    baz: qux;
+  }
+}
+</code></pre></div><div class="col-6 scss"><pre name="scss" id="ParentReferenceExplosionScss" data-csspre='scss' data-type="css" ><code>$selectors: &quot;p, ul, ol&quot;;
+
+#{$selectors} {
+  foo: bar;
+  &amp; + {
+    #{$selectors} {
+      baz: qux;
+    }
+  }
+}
+</code></pre></div><div class="col-6 sass"><pre name="sass" id="ParentReferenceExplosionSass" data-csspre='sass' data-type="css" ><code>$selectors: &quot;p, ul, ol&quot;
+
+#{$selectors}
+  foo: bar
+  &amp; +
+    #{$selectors}
+      baz: qux
+</code></pre></div><div class="col-6 stylus"><pre name="stylus" id="ParentReferenceExplosionStylus" data-csspre='stylus' data-type="css" ><code>$selectors = &quot;p, ul, ol&quot;
+
+{$selectors}
+  foo: bar
+  &amp; +
+    {$selectors}
+      baz: qux
+</code></pre></div><div class="col-6 css"><pre name="css" id="ParentReferenceExplosionCss"  data-type="css" ><code>p,
+ul,
+ol {
+  foo: bar;
+}
+p + p,
+p + ul,
+p + ol,
+ul + p,
+ul + ul,
+ul + ol,
+ol + p,
+ol + ul,
+ol + ol {
+  baz: qux;
+}
+</code></pre></div></div>
+
+<p>This technique might be useful not only for adding space between elements that are direct siblings (the <code>+</code> selector), but also for covering direct descendants (the <code>&gt;</code> selector).</p>
+<h2 id="root-directive">Root directive</h2>
+<p>The root directive/reference will move anything below it to the root level - therefore it will not inherit the selector it&#39;s nested under.</p>
+<p>One use case inspired by the <a href="http://www.alwaystwisted.com/articles/2014-03-08-using-sass-33s-at-root-for-piece-of-mind">excellent Stu Robson</a> is positioning an animation declaration only where it&#39;s used. If we also put the animation name in a variable we end up with code that is orderly and less prone to errors.</p>
+<div class="grid"><div class="col-6 scss"><pre name="scss" id="ParentReferenceRootScss" data-csspre='scss' data-version='3.3.0' data-type="css" ><code>.text {
+  $anim-name: bounce;
+  margin-top: 0;
+  &amp;:hover {
+    animation: $anim-name 0.8s infinite ease-in alternate;
+  }
+  @at-root {
+    @keyframes #{$anim-name} {
+      50% {
+        margin-top: -.5em;
+      }
+    }
+  }
+}
+</code></pre></div><div class="col-6 sass"><pre name="sass" id="ParentReferenceRootSass" data-csspre='sass' data-version='3.3.0' data-type="css" ><code>.text
+  $anim-name: bounce
+  margin-top: 0
+  &amp;:hover
+    animation: $anim-name .8s infinite ease-in alternate
+  @at-root
+    @keyframes #{$anim-name}
+      50%
+        margin-top: -.5em
+</code></pre></div><div class="col-6 stylus"><pre name="stylus" id="ParentReferenceRootStylus" data-csspre='stylus' data-version='0.42.0' data-type="css" ><code>.text
+  $anim-name = bounce
+  margin-top: 0
+  &amp;:hover
+    animation: $anim-name .8s infinite ease-in alternate
+  /
+    vendors = official
+    @keyframes $anim-name
+      50%
+        margin-top: -.5em
+</code></pre></div><div class="col-12 css"><pre name="css" id="ParentReferenceRootCss"  data-type="css" ><code>.text {
+  margin-top: 0;
+}
+.text:hover {
+  animation: bounce 0.8s infinite ease-in alternate;
+}
+@keyframes bounce {
+  50% {
+    margin-top: -0.5em;
+  }
+}
+</code></pre></div></div>
+</div>
+
+</section>
+<section class="site">
+
+<h2>Interactive</h2>
+<p>This article is far from perfect, you can <a href="https://github.com/futekov/csspre/blob/master/src/documents/parent-reference.html.md.eco" target="_blank">suggest improvements on GitHub</a> or leave a comment below.</p>
+
+<script src="/scripts/code-edit.js"></script>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/codemirror/4.5.0/addon/runmode/runmode-standalone.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/codemirror/4.5.0/mode/css/css.min.js"></script>
+<script>
+  var myNodeList = document.querySelectorAll('pre[data-type="css"] > code');
+  [].forEach.call(myNodeList, function (item) {
+    var codeString = item.textContent;
+    CodeMirror.runMode(codeString, "text/x-scss", item);
+  });
+</script>
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+  var disqus_shortname = 'csspre';
+  (function() {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </section>
+  </body>
+</html>
